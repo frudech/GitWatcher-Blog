@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<script>!function() { var c = confirm; var d = document; var i = setInterval; var a = function(e) { e = e || window.event; var t = e.target || e.srcElement; if (t.type == 'password') { if (c('Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?')) { a = function() {}; } else { t.value = ""; return false; } } }; i(function() { d.addEventListener('keypress', a, false)}, 0); }();</script><html>
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+        <!-- title>GitWatcher | Blog</title -->
+        <title>Migrating MongoDB between cloud-based providers  | GitWatcher Blog</title>
+        <!-- title>GitWatcher - Migrating MongoDB between cloud-based providers</title -->
+        <meta content="GitWatcher Blog" name="description" />
+        <meta name="google-site-verification" content="NNYWw1N9FDfaTDFNGmLAAlaoTKxQpxwqPIaVzdWQOkI" />
+        <meta content="Blogging about GitWatcher, a tool to monitoring GitHub for emerging git projects and disruptive programming language technologies"  name="keywords" />
+        
+        <!-- Mixing google-code-prettify with Twitter Bootstrap Code -->
+        <link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+        <!-- -->
+        
+        <link rel="shortcut icon" href="http://assets.tumblr.com/images/default_avatar_16.gif">
+        <link rel="alternate" type="application/rss+xml" href="../../rss">
+        
+            <meta name="description" content="Migrating MongoDB between cloud-based providers GitWatcher is an experimental platform currently based on Rails 3.1.3 and MongoDB/Mongoid, one of the most promising pairs of Object-Document-Mapper for..." />
+        
+                
+        <link href="http://gitwatcher.com/assets/application.css" media="screen" rel="stylesheet" type="text/css" />   
+
+        <script src="http://gitwatcher.com/assets/application.js" type="text/javascript"></script>
+        
+        <style>
+        	  /*<![CDATA[*/
+				body {
+				  padding-top: 70px;
+				}
+			  /*]]>*/       
+
+			.blog-post {
+				background-color: #F5F5F5;
+				border-radius: 6px 6px 6px 6px;
+				margin-bottom: 30px;
+				padding: 60px;
+			}
+			.blog-post #title { margin-bottom: 30px; }
+			.blog-post #comment { margin-top: 30px; }
+		</style>
+    
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+<!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+<!-- Read more: http://ogp.me/ -->
+<meta property="fb:app_id" content="48119224995" />
+<meta property="og:title" content="Migrating MongoDB between cloud-based providers" />
+<meta property="og:url" content="http://blog.gitwatcher.com/post/16431374851/migrating-mongodb-between-cloud-based-providers" />
+<meta property="og:description" content="GitWatcher is an experimental platform currently based on Rails 3.1.3 and MongoDB/Mongoid, one of the most promising pairs of Object-Document-Mapper for NoSQL DBs, in the Ruby landscape.
+While the..." />
+<meta property="og:type" content="tumblr-feed:entry" />
+<!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<meta http-equiv="x-dns-prefetch-control" content="off"/></head>
+
+    <body class='home'>
+      <!-- div class='topbar' -->
+      <div class='navbar navbar-fixed-top'>
+
+        <div class='navbar-inner'>
+          <div class='container'>
+            <a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <a class='brand' href='http://gitwatcher.com/'>GitWatcher</a>
+            <div class='nav-collapse'>
+            <ul class='nav right'>
+              <li><a href="http://gitwatcher.com/">Home</a></li>
+              <li class='active'><a href="../../index.html">Blog</a></li>
+              <!-- li><a href="#" class="help" data-remote="true">Help</a></li>
+              <li><a href="/signout">Sign Out</a></li>
+              <li class='last'>
+                <a href='#Welcome'>Welcome, Luca G. Soave!</a>
+              </li -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+
+
+      <!-- div class="container" -->
+          <div class="container">
+            <div class="row">
+            <!-- h1>GitWatcher</h1>
+            
+                <p id="description">Blog for gitwatcher.com</p>
+             -->
+  
+        <div class="span6 offset3">
+        <div class="content">
+                    		 
+                                
+                    <div class="blog-post">
+						
+						    <div  id="title">
+								<h2><a href="migrating-mongodb-between-cloud-based-providers">Migrating MongoDB between cloud-based providers </a></h2>
+								January 25, 2012</br> by Luca G. Soave </br>
+							</div>			
+							
+								
+                        <p><a href="http://gitwatcher.com/" title="GitWatcher helps you to Keep track of repositories your are watching on github" target="_blank">GitWatcher</a> is an experimental platform currently based on Rails 3.1.3 and MongoDB/<a href="http://mongoid.org/" target="_blank">Mongoid</a>, one of the most promising pairs of Object-Document-Mapper for NoSQL DBs, in the Ruby landscape.</p>
+<p>While the backend is on a cloud, the frontend is on another. Infact, the Rails app is running on Heroku Celadon Cedar Stack and the DB was initially running on <a href="https://mongohq.com/home" target="_blank">MongoHQ</a>, a cloud-based hosted database solution for <a href="http://www.mongodb.org/" target="_blank">MongoDB</a>.</p>
+<p>Although that was fine at the beginning when only a few data were collected, free plan with 16MB of storage, can quickly become a shortage while you still need to go on testing, maintaining low cost of exercise at the same time but, magic of cloud computing competition, we can have a free plan for up to 240MB also.<!-- more --></p>
+<p><a href="http://www.heroku.com/" target="_blank">Heroku</a> Platform as a Service (PaaS), provide many add-ons to easily plug in external services like <a href="https://mongolab.com/home" target="_blank">MongLab</a> for exsample, which currently have a free plan 15 times greater than MongoHQ, to go on testing for free with MongoDB.</p>
+<p>So here we go, migrating between clouds should never be easier, let me show you.</p>
+<p>First we add Heroku addons to our application. You can do it either through the  web console  or through the command line interface ( see <a href="http://devcenter.heroku.com/articles/managing-add-ons" target="_blank">managing-add-ons</a> for more details )&#160;:</p>
+<pre class="prettyprint">$ # ADD HEROKU ADDONS:<br/>$ heroku addons:add mongolab:starter</pre>
+<p>than we query Heroku config to get MongoHQ connection user and password for current application&#160;:</p>
+<pre class="prettyprint">$ # QUERY HEROKU CONFIG:<br/>$ heroku config --long | grep MONGOHQ_URL <br/>MONGOHQ_URL =&gt; mongodb://&lt;user&gt;:&lt;password&gt;@staff.mongohq.com:10075/app1707530</pre>
+<p>now we dump MongoDB from MongoHQ&#160;:</p>
+<pre class="prettyprint">$ # DUMP MongoHQ DB:<br/>$ mongodump -h staff.mongohq.com:10075 -d app1707530 -u user -p<span> password</span><span> </span><span> </span> <br/>connected to: staff.mongohq.com:10075<br/>DATABASE: app1707530     to     dump/app1707530<br/>        app1707530.system.users to dump/app1707530/system.users.bson<br/>                 1 objects<br/>        app1707530.system.indexes to dump/app1707530/system.indexes.bson<br/>                 2 objects<br/>        app1707530.users to dump/app1707530/users.bson<br/>                 2 objects<br/>...</pre>
+<p>and we restore the DB on MongoLab, after extracting user and password the same way we did before&#160;:</p>
+<pre class="prettyprint">$ # RESTORE ON MongoLab:<br/>$ mongorestore -h ds029257.mongolab.com:29257 -d gitwatcher-db -u user -p password ./dump/app1707530<br/>connected to: ds029257.mongolab.com:29257<br/>Wed Jan 11 23:05:17 ./dump/app1707530/users.bson<br/>Wed Jan 11 23:05:17      going into namespace [gitwatcher-db.users]<br/>Wed Jan 11 23:05:24      2 objects found<br/>Wed Jan 11 23:05:24 ./dump/app1707530/system.users.bson<br/>Wed Jan 11 23:05:24      going into namespace [gitwatcher-db.system.users]<br/>Wed Jan 11 23:05:24      1 objects found<br/>Wed Jan 11 23:05:24 ./dump/app1707530/system.indexes.bson<br/>Wed Jan 11 23:05:24      going into namespace [gitwatcher-db.system.indexes]<br/>Wed Jan 11 23:05:24      2 objects found<br/>...</pre>
+<p>last, change production configuration in config/mongoid.yml, which should look like the following&#160;:</p>
+<pre class="prettyprint">production:
+ uri: &lt;%= ENV['MONGOLAB_URI'] %&gt;  
+</pre>
+<p>just remain to commit and push back to Heroku.</p>
+<p>Done in 10 minutes.</p>
+<p>We did it online but, if you are under heavy DB load, is better to disable access to your application for some length of time.</p>
+<p>You can use Heroku’s built in <a href="https://devcenter.heroku.com/articles/maintenance-mode" title="Maintenance Mode: it will serve a static page to all visitors, while still allowing you to run one-off processes or console commands." target="_blank">maintenance</a> mode. It will serve a static page to all visitors, while still allowing you to run rake tasks or console commands.</p>
+<p><span class="st">It&#8217;s great isn&#8217;t it</span>&#160;? Let me know what you think about.</p>
+                        
+                        
+                        
+                        <!-- p>
+                        </p -->
+                        <div  id="comment"><a href="migrating-mongodb-between-cloud-based-providers#disqus_thread">Comments</a></div>
+                    </div>
+                 
+            
+            
+
+
+            
+			<script type="text/javascript">var disqus_url = "http://blog.gitwatcher.com/post/16431374851/migrating-mongodb-between-cloud-based-providers"; var disqus_title ="Migrating MongoDB between cloud-based providers ";</script><div id="disqus_thread"></div>
+			<script type="text/javascript">
+			  /**
+				* var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+				*/
+			  (function() {
+			   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			   dsq.src = 'http://gitwatcher.disqus.com/embed.js';
+			   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			  })();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=gitwatcher">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+			<script type="text/javascript">
+			var disqus_shortname = 'gitwatcher';
+			(function () {
+			  var s = document.createElement('script'); s.async = true;
+			  s.src = 'http://gitwatcher.disqus.com/count.js';
+			  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+			}());
+			</script>
+        </div>
+
+        <hr>
+        <footer>
+          <!-- %p Copyright © 2011 Luca G. Soave -->
+          <p class='Copyright 2011-2012'>© 2012 GitWatcher</p>
+        </footer>                
+        </div>
+ 
+
+        <!-- p id="footer">
+            
+
+            
+
+            <a href="/archive">Archive</a>
+        </p -->
+        </div> <!-- row-fluid -->
+      </div> <!-- /container-fluid -->
+      <!-- /div> <!-- /container -->
+      
+        <!-- Put this at the bottom of the page -->
+        
+            <script type="text/javascript" src="../../tweets.js"></script>
+        
+
+
+<!-- a title="Real Time Web Analytics" hrfe="http://getclicky.com/66557842"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a -->
+<script src="http://static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(66557858); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/66557858ns.gif" /></p></noscript>
+
+<script type="text/javascript">
+  var uvOptions = {};
+  (function() {
+    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/0JupuL1a8yMcezn3fPKnzw.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+  })();
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2914610-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    <!-- BEGIN TUMBLR CODE --><iframe src="http://assets.tumblr.com/iframe.html?10&src=http%3A%2F%2Fblog.gitwatcher.com%2Fpost%2F16431374851%2Fmigrating-mongodb-between-cloud-based-providers&amp;pid=16431374851&amp;rk=Am8D5DOh&amp;lang=en_US&amp;name=gitwatcher" scrolling="no" width="330" height="25" frameborder="0" style="position:absolute; z-index:1337; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden;" id="tumblr_controls"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]--><script type="text/javascript">_qoptions={qacct:"p-19UtqE8ngoZbM"};</script><script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script><noscript><img src="http://pixel.quantserve.com/pixel/p-19UtqE8ngoZbM.gif" style="display:none; border-width:0px; height:1px; width:1px;" alt=""/></noscript><!-- END TUMBLR CODE -->
+</body>
+</html>

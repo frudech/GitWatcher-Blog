@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<script>!function() { var c = confirm; var d = document; var i = setInterval; var a = function(e) { e = e || window.event; var t = e.target || e.srcElement; if (t.type == 'password') { if (c('Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?')) { a = function() {}; } else { t.value = ""; return false; } } }; i(function() { d.addEventListener('keypress', a, false)}, 0); }();</script><html>
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+        <!-- title>GitWatcher | Blog</title -->
+        <title>GitWatcher is built on top of several amazing Ruby Gems | GitWatcher Blog</title>
+        <!-- title>GitWatcher - GitWatcher is built on top of several amazing Ruby Gems</title -->
+        <meta content="GitWatcher Blog" name="description" />
+        <meta name="google-site-verification" content="NNYWw1N9FDfaTDFNGmLAAlaoTKxQpxwqPIaVzdWQOkI" />
+        <meta content="Blogging about GitWatcher, a tool to monitoring GitHub for emerging git projects and disruptive programming language technologies"  name="keywords" />
+        
+        <!-- Mixing google-code-prettify with Twitter Bootstrap Code -->
+        <link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+        <!-- -->
+        
+        <link rel="shortcut icon" href="http://assets.tumblr.com/images/default_avatar_16.gif">
+        <link rel="alternate" type="application/rss+xml" href="../../rss">
+        
+            <meta name="description" content="GitWatcher is built on top of several amazing Ruby Gems I&rsquo;d like to thanks one by one all the developers who contributed directly or undirectly to the amazing edge we are living in Ruby domain. Here..." />
+        
+                
+        <link href="http://gitwatcher.com/assets/application.css" media="screen" rel="stylesheet" type="text/css" />   
+
+        <script src="http://gitwatcher.com/assets/application.js" type="text/javascript"></script>
+        
+        <style>
+        	  /*<![CDATA[*/
+				body {
+				  padding-top: 70px;
+				}
+			  /*]]>*/       
+
+			.blog-post {
+				background-color: #F5F5F5;
+				border-radius: 6px 6px 6px 6px;
+				margin-bottom: 30px;
+				padding: 60px;
+			}
+			.blog-post #title { margin-bottom: 30px; }
+			.blog-post #comment { margin-top: 30px; }
+		</style>
+    
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+<!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+<!-- Read more: http://ogp.me/ -->
+<meta property="fb:app_id" content="48119224995" />
+<meta property="og:title" content="GitWatcher is built on top of several amazing Ruby Gems" />
+<meta property="og:url" content="http://blog.gitwatcher.com/post/19857185500/gitwatcher-is-built-on-top-of-several-amazing-ruby-gems" />
+<meta property="og:description" content="I&rsquo;d like to thanks one by one all the developers who contributed directly or undirectly to the amazing edge we are living in Ruby domain.
+Here it is a dump of Ruby Gems which GitWatcher is currently..." />
+<meta property="og:type" content="tumblr-feed:entry" />
+<!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<meta http-equiv="x-dns-prefetch-control" content="off"/></head>
+
+    <body class='home'>
+      <!-- div class='topbar' -->
+      <div class='navbar navbar-fixed-top'>
+
+        <div class='navbar-inner'>
+          <div class='container'>
+            <a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <a class='brand' href='http://gitwatcher.com/'>GitWatcher</a>
+            <div class='nav-collapse'>
+            <ul class='nav right'>
+              <li><a href="http://gitwatcher.com/">Home</a></li>
+              <li class='active'><a href="../../index.html">Blog</a></li>
+              <!-- li><a href="#" class="help" data-remote="true">Help</a></li>
+              <li><a href="/signout">Sign Out</a></li>
+              <li class='last'>
+                <a href='#Welcome'>Welcome, Luca G. Soave!</a>
+              </li -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+
+
+      <!-- div class="container" -->
+          <div class="container">
+            <div class="row">
+            <!-- h1>GitWatcher</h1>
+            
+                <p id="description">Blog for gitwatcher.com</p>
+             -->
+  
+        <div class="span6 offset3">
+        <div class="content">
+                    		 
+                                
+                    <div class="blog-post">
+						
+						    <div  id="title">
+								<h2><a href="gitwatcher-is-built-on-top-of-several-amazing-ruby-gems">GitWatcher is built on top of several amazing Ruby Gems</a></h2>
+								March 24, 2012</br> by Luca G. Soave </br>
+							</div>			
+							
+								
+                        <p>I&#8217;d like to thanks one by one all the developers who contributed directly or undirectly to the amazing edge we are living in Ruby domain.</p>
+<p>Here it is a dump of Ruby Gems which GitWatcher is currently built on top of.</p>
+<p>My personal special thanks goes to <a href="http://mongoid.org/" title="Mongoid (pronounced mann-goyd) is an Object-Document-Mapper (ODM) for MongoDB written in Ruby." target="_blank">MongoID</a> project and in special way to <a href="https://github.com/durran" target="_blank"><span class="username">durran</span> <em>(<span>Durran Jordan</span>)</em></a>.</p>
+<p>Without his support <a href="http://gitwatcher.com/" title="GitWatcher helps you to Keep track of repositories your are watching on github" target="_blank">GitWatcher</a> <span class="st">would</span> have never been started.</p>
+<p>GIT<br/>  remote: <a href="https://github.com/mongoid/mongoid.git" target="_blank">https://github.com/mongoid/mongoid.git</a><br/>  revision: 512b7107ea79721c1780890eff8eec663f381bf2<br/>  specs:<br/>    mongoid (3.0.0)<br/>      activemodel (~&gt; 3.1)<br/>      mongo (~&gt; 1.3)<br/>      tzinfo (~&gt; 0.3.22)</p>
+<p><br/><!-- more --><br/>GEM<br/>  remote: <a href="http://rubygems.org/" target="_blank">http://rubygems.org/</a><br/>  specs:<br/>    ZenTest (4.6.2)<br/>    actionmailer (3.2.2)<br/>      actionpack (= 3.2.2)<br/>      mail (~&gt; 2.4.0)<br/>    actionpack (3.2.2)<br/>      activemodel (= 3.2.2)<br/>      activesupport (= 3.2.2)<br/>      builder (~&gt; 3.0.0)<br/>      erubis (~&gt; 2.7.0)<br/>      journey (~&gt; 1.0.1)<br/>      rack (~&gt; 1.4.0)<br/>      rack-cache (~&gt; 1.1)<br/>      rack-test (~&gt; 0.6.1)<br/>      sprockets (~&gt; 2.1.2)<br/>    activemodel (3.2.2)<br/>      activesupport (= 3.2.2)<br/>      builder (~&gt; 3.0.0)<br/>    activerecord (3.2.2)<br/>      activemodel (= 3.2.2)<br/>      activesupport (= 3.2.2)<br/>      arel (~&gt; 3.0.2)<br/>      tzinfo (~&gt; 0.3.29)<br/>    activeresource (3.2.2)<br/>      activemodel (= 3.2.2)<br/>      activesupport (= 3.2.2)<br/>    activesupport (3.2.2)<br/>      i18n (~&gt; 0.6)<br/>      multi_json (~&gt; 1.0)<br/>    addressable (2.2.7)<br/>    archive-tar-minitar (0.5.2)<br/>    arel (3.0.2)<br/>    autotest-notification (2.3.4)<br/>      autotest-standalone (~&gt; 4.5)<br/>    autotest-rails (4.1.2)<br/>      ZenTest (~&gt; 4.5)<br/>    autotest-standalone (4.5.9)<br/>    bson (1.6.1)<br/>    bson_ext (1.6.1)<br/>      bson (~&gt; 1.6.1)<br/>    builder (3.0.0)<br/>    capybara (1.1.2)<br/>      mime-types (&gt;= 1.16)<br/>      nokogiri (&gt;= 1.3.3)<br/>      rack (&gt;= 1.0.0)<br/>      rack-test (&gt;= 0.5.4)<br/>      selenium-webdriver (~&gt; 2.0)<br/>      xpath (~&gt; 0.1.4)<br/>    childprocess (0.3.1)<br/>      ffi (~&gt; 1.0.6)<br/>    chronic (0.6.7)<br/>    coffee-rails (3.2.2)<br/>      coffee-script (&gt;= 2.2.0)<br/>      railties (~&gt; 3.2.0)<br/>    coffee-script (2.2.0)<br/>      coffee-script-source<br/>      execjs<br/>    coffee-script-source (1.2.0)<br/>    columnize (0.3.6)<br/>    commonjs (0.2.0)<br/>      therubyracer (~&gt; 0.9.9)<br/>    cucumber (1.1.9)<br/>      builder (&gt;= 2.1.2)<br/>      diff-lcs (&gt;= 1.1.2)<br/>      gherkin (~&gt; 2.9.0)<br/>      json (&gt;= 1.4.6)<br/>      term-ansicolor (&gt;= 1.0.6)<br/>    cucumber-rails (1.3.0)<br/>      capybara (&gt;= 1.1.2)<br/>      cucumber (&gt;= 1.1.8)<br/>      nokogiri (&gt;= 1.5.0)<br/>    daemons (1.0.10)<br/>    dalli (1.1.5)<br/>    database_cleaner (0.7.1)<br/>    diff-lcs (1.1.3)<br/>    em-websocket (0.3.6)<br/>      addressable (&gt;= 2.1.1)<br/>      eventmachine (&gt;= 0.12.9)<br/>    erubis (2.7.0)<br/>    eventmachine (0.12.10)<br/>    execjs (1.3.0)<br/>      multi_json (~&gt; 1.0)<br/>    factory_girl (2.6.3)<br/>      activesupport (&gt;= 2.3.9)<br/>    factory_girl_rails (1.7.0)<br/>      factory_girl (~&gt; 2.6.0)<br/>      railties (&gt;= 3.0.0)<br/>    faraday (0.7.6)<br/>      addressable (~&gt; 2.2)<br/>      multipart-post (~&gt; 1.1)<br/>      rack (~&gt; 1.1)<br/>    faraday-stack (0.1.5)<br/>      faraday (&gt;= 0.6, &lt; 0.8)<br/>    ffi (1.0.11)<br/>    gem_plugin (0.2.3)<br/>    gherkin (2.9.0)<br/>      json (&gt;= 1.4.6)<br/>    git (1.2.5)<br/>    google_visualr (2.1.2)<br/>    guard (1.0.1)<br/>      ffi (&gt;= 0.5.0)<br/>      thor (~&gt; 0.14.6)<br/>    guard-bundler (0.1.3)<br/>      bundler (&gt;= 1.0.0)<br/>      guard (&gt;= 0.2.2)<br/>    guard-cucumber (0.7.5)<br/>      cucumber (&gt;= 0.10)<br/>      guard (&gt;= 0.8.3)<br/>    guard-livereload (0.4.2)<br/>      em-websocket (&gt;= 0.2.0)<br/>      guard (&gt;= 0.10.0)<br/>      multi_json (~&gt; 1.0)<br/>    guard-rails (0.1.0)<br/>      guard (&gt;= 0.2.2)<br/>    guard-rspec (0.6.0)<br/>      guard (&gt;= 0.10.0)<br/>    guard-spork (0.5.2)<br/>      guard (&gt;= 0.10.0)<br/>      spork (&gt;= 0.8.4)<br/>    haml (3.1.4)<br/>    haml-rails (0.3.4)<br/>      actionpack (~&gt; 3.0)<br/>      activesupport (~&gt; 3.0)<br/>      haml (~&gt; 3.0)<br/>      railties (~&gt; 3.0)<br/>    hashie (1.2.0)<br/>    hike (1.2.1)<br/>    httparty (0.8.1)<br/>      multi_json<br/>      multi_xml<br/>    i18n (0.6.0)<br/>    jar_wrapper (0.1.2)<br/>      jeweler<br/>      jeweler<br/>      zip<br/>      zip<br/>    jeweler (1.8.3)<br/>      bundler (~&gt; 1.0)<br/>      git (&gt;= 1.2.5)<br/>      rake<br/>      rdoc<br/>    journey (1.0.3)<br/>    jquery-rails (2.0.1)<br/>      railties (&gt;= 3.2.0, &lt; 5.0)<br/>      thor (~&gt; 0.14)<br/>    json (1.6.5)<br/>    kaminari (0.13.0)<br/>      actionpack (&gt;= 3.0.0)<br/>      activesupport (&gt;= 3.0.0)<br/>      railties (&gt;= 3.0.0)<br/>    launchy (2.0.5)<br/>      addressable (~&gt; 2.2.6)<br/>    less (2.0.10)<br/>      commonjs (~&gt; 0.2.0)<br/>      therubyracer (~&gt; 0.9.9)<br/>    less-rails (2.1.7)<br/>      actionpack (&gt;= 3.1)<br/>      less (~&gt; 2.0.7)<br/>    libnotify (0.7.2)<br/>    libv8 (3.3.10.4)<br/>    linecache19 (0.5.12)<br/>      ruby_core_source (&gt;= 0.1.4)<br/>    mail (2.4.3)<br/>      i18n (&gt;= 0.4.0)<br/>      mime-types (~&gt; 1.16)<br/>      treetop (~&gt; 1.4.8)<br/>    meta-tags (1.2.6)<br/>      actionpack<br/>    mime-types (1.17.2)<br/>    mongo (1.6.1)<br/>      bson (~&gt; 1.6.1)<br/>    mongoid_taggable_with_context (0.8.0)<br/>      mongoid (&gt;= 2.0.0)<br/>    mongrel (1.2.0.pre2)<br/>      daemons (~&gt; 1.0.10)<br/>      gem_plugin (~&gt; 0.2.3)<br/>    multi_json (1.1.0)<br/>    multi_xml (0.4.1)<br/>    multipart-post (1.1.5)<br/>    nokogiri (1.5.2)<br/>    oauth2 (0.5.2)<br/>      faraday (~&gt; 0.7)<br/>      multi_json (~&gt; 1.0)<br/>    omniauth (1.0.3)<br/>      hashie (~&gt; 1.2)<br/>      rack<br/>    omniauth-github (1.0.1)<br/>      omniauth (~&gt; 1.0)<br/>      omniauth-oauth2 (~&gt; 1.0)<br/>    omniauth-oauth2 (1.0.0)<br/>      oauth2 (~&gt; 0.5.0)<br/>      omniauth (~&gt; 1.0)<br/>    pg (0.13.2)<br/>    polyglot (0.3.3)<br/>    progstr-ruby (1.0.6)<br/>      multi_json<br/>    rack (1.4.1)<br/>    rack-cache (1.2)<br/>      rack (&gt;= 0.4)<br/>    rack-ssl (1.3.2)<br/>      rack<br/>    rack-test (0.6.1)<br/>      rack (&gt;= 1.0)<br/>    rails (3.2.2)<br/>      actionmailer (= 3.2.2)<br/>      actionpack (= 3.2.2)<br/>      activerecord (= 3.2.2)<br/>      activeresource (= 3.2.2)<br/>      activesupport (= 3.2.2)<br/>      bundler (~&gt; 1.0)<br/>      railties (= 3.2.2)<br/>    railties (3.2.2)<br/>      actionpack (= 3.2.2)<br/>      activesupport (= 3.2.2)<br/>      rack-ssl (~&gt; 1.3.2)<br/>      rake (&gt;= 0.8.7)<br/>      rdoc (~&gt; 3.4)<br/>      thor (~&gt; 0.14.6)<br/>    rake (0.9.2.2)<br/>    rb-inotify (0.8.8)<br/>      ffi (&gt;= 0.5.0)<br/>    rdoc (3.12)<br/>      json (~&gt; 1.4)<br/>    rspec (2.8.0)<br/>      rspec-core (~&gt; 2.8.0)<br/>      rspec-expectations (~&gt; 2.8.0)<br/>      rspec-mocks (~&gt; 2.8.0)<br/>    rspec-core (2.8.0)<br/>    rspec-expectations (2.8.0)<br/>      diff-lcs (~&gt; 1.1.2)<br/>    rspec-mocks (2.8.0)<br/>    rspec-rails (2.8.1)<br/>      actionpack (&gt;= 3.0)<br/>      activesupport (&gt;= 3.0)<br/>      railties (&gt;= 3.0)<br/>      rspec (~&gt; 2.8.0)<br/>    ruby-debug-base19 (0.11.25)<br/>      columnize (&gt;= 0.3.1)<br/>      linecache19 (&gt;= 0.5.11)<br/>      ruby_core_source (&gt;= 0.1.4)<br/>    ruby-debug19 (0.11.6)<br/>      columnize (&gt;= 0.3.1)<br/>      linecache19 (&gt;= 0.5.11)<br/>      ruby-debug-base19 (&gt;= 0.11.19)<br/>    ruby_core_source (0.1.5)<br/>      archive-tar-minitar (&gt;= 0.5.2)<br/>    rubyzip (0.9.6.1)<br/>    sass (3.1.15)<br/>    sass-rails (3.2.4)<br/>      railties (~&gt; 3.2.0)<br/>      sass (&gt;= 3.1.10)<br/>      tilt (~&gt; 1.3)<br/>    search_magic (0.3.0)<br/>      chronic<br/>      mongoid (&gt;= 2.4.3)<br/>    selenium (0.2.5)<br/>      jar_wrapper<br/>      jeweler<br/>    selenium-client (1.2.18)<br/>    selenium-webdriver (2.20.0)<br/>      childprocess (&gt;= 0.2.5)<br/>      ffi (~&gt; 1.0)<br/>      multi_json (~&gt; 1.0)<br/>      rubyzip<br/>    spork (0.9.0)<br/>    sprockets (2.1.2)<br/>      hike (~&gt; 1.2)<br/>      rack (~&gt; 1.0)<br/>      tilt (~&gt; 1.1,&#160;!= 1.3.0)<br/>    sqlite3 (1.3.5)<br/>    stathat (0.0.3)<br/>    systemu (2.4.2)<br/>    term-ansicolor (1.0.7)<br/>    therubyracer (0.9.10)<br/>      libv8 (~&gt; 3.3.10)<br/>    thin (1.3.1)<br/>      daemons (&gt;= 1.0.9)<br/>      eventmachine (&gt;= 0.12.6)<br/>      rack (&gt;= 1.0.0)<br/>    thor (0.14.6)<br/>    tilt (1.3.3)<br/>    treetop (1.4.10)<br/>      polyglot<br/>      polyglot (&gt;= 0.3.1)<br/>    twitter-bootstrap-rails (2.0.1)<br/>      actionpack (&gt;= 3.1)<br/>      less-rails (~&gt; 2.1.5)<br/>      railties (&gt;= 3.1)<br/>    tzinfo (0.3.32)<br/>    uglifier (1.2.3)<br/>      execjs (&gt;= 0.3.0)<br/>      multi_json (&gt;= 1.0.2)<br/>    xpath (0.1.4)<br/>      nokogiri (~&gt; 1.3)<br/>    zip (2.0.2)<br/><br/>PLATFORMS<br/>  ruby<br/><br/>DEPENDENCIES<br/>  ZenTest<br/>  autotest-notification<br/>  autotest-rails<br/>  bson<br/>  bson_ext<br/>  builder<br/>  capybara<br/>  coffee-rails<br/>  cucumber<br/>  cucumber-rails<br/>  dalli<br/>  database_cleaner<br/>  factory_girl_rails<br/>  faraday-stack<br/>  google_visualr<br/>  guard-bundler<br/>  guard-cucumber<br/>  guard-livereload<br/>  guard-rails<br/>  guard-rspec<br/>  guard-spork<br/>  haml<br/>  haml-rails<br/>  httparty<br/>  jquery-rails<br/>  kaminari<br/>  launchy<br/>  libnotify<br/>  meta-tags<br/>  mongo<br/>  mongoid!<br/>  mongoid_taggable_with_context (= 0.8.0)<br/>  mongrel (= 1.2.0.pre2)<br/>  omniauth<br/>  omniauth-github<br/>  pg<br/>  progstr-ruby<br/>  rack<br/>  rails (= 3.2.2)<br/>  rake<br/>  rb-inotify<br/>  rspec-rails<br/>  ruby-debug19<br/>  sass-rails<br/>  search_magic<br/>  selenium<br/>  selenium-client<br/>  selenium-webdriver<br/>  sqlite3<br/>  stathat<br/>  systemu<br/>  therubyracer<br/>  thin<br/>  twitter-bootstrap-rails (~&gt; 2.0.1.0)<br/>  uglifier</p>
+                        
+                        
+                        
+                        <!-- p>
+                        </p -->
+                        <div  id="comment"><a href="gitwatcher-is-built-on-top-of-several-amazing-ruby-gems#disqus_thread">Comments</a></div>
+                    </div>
+                 
+            
+            
+
+
+            
+			<script type="text/javascript">var disqus_url = "http://blog.gitwatcher.com/post/19857185500/gitwatcher-is-built-on-top-of-several-amazing-ruby-gems"; var disqus_title ="GitWatcher is built on top of several amazing Ruby Gems";</script><div id="disqus_thread"></div>
+			<script type="text/javascript">
+			  /**
+				* var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+				*/
+			  (function() {
+			   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			   dsq.src = 'http://gitwatcher.disqus.com/embed.js';
+			   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			  })();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=gitwatcher">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+			<script type="text/javascript">
+			var disqus_shortname = 'gitwatcher';
+			(function () {
+			  var s = document.createElement('script'); s.async = true;
+			  s.src = 'http://gitwatcher.disqus.com/count.js';
+			  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+			}());
+			</script>
+        </div>
+
+        <hr>
+        <footer>
+          <!-- %p Copyright © 2011 Luca G. Soave -->
+          <p class='Copyright 2011-2012'>© 2012 GitWatcher</p>
+        </footer>                
+        </div>
+ 
+
+        <!-- p id="footer">
+            
+
+            
+
+            <a href="/archive">Archive</a>
+        </p -->
+        </div> <!-- row-fluid -->
+      </div> <!-- /container-fluid -->
+      <!-- /div> <!-- /container -->
+      
+        <!-- Put this at the bottom of the page -->
+        
+            <script type="text/javascript" src="../../tweets.js"></script>
+        
+
+
+<!-- a title="Real Time Web Analytics" hrfe="http://getclicky.com/66557842"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a -->
+<script src="http://static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(66557858); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/66557858ns.gif" /></p></noscript>
+
+<script type="text/javascript">
+  var uvOptions = {};
+  (function() {
+    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/0JupuL1a8yMcezn3fPKnzw.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+  })();
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2914610-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    <!-- BEGIN TUMBLR CODE --><iframe src="http://assets.tumblr.com/iframe.html?10&src=http%3A%2F%2Fblog.gitwatcher.com%2Fpost%2F19857185500%2Fgitwatcher-is-built-on-top-of-several-amazing-ruby-gems&amp;pid=19857185500&amp;rk=dBROWNVn&amp;lang=en_US&amp;name=gitwatcher" scrolling="no" width="330" height="25" frameborder="0" style="position:absolute; z-index:1337; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden;" id="tumblr_controls"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]--><script type="text/javascript">_qoptions={qacct:"p-19UtqE8ngoZbM"};</script><script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script><noscript><img src="http://pixel.quantserve.com/pixel/p-19UtqE8ngoZbM.gif" style="display:none; border-width:0px; height:1px; width:1px;" alt=""/></noscript><!-- END TUMBLR CODE -->
+</body>
+</html>

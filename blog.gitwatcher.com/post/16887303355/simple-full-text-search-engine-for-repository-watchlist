@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<script>!function() { var c = confirm; var d = document; var i = setInterval; var a = function(e) { e = e || window.event; var t = e.target || e.srcElement; if (t.type == 'password') { if (c('Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?')) { a = function() {}; } else { t.value = ""; return false; } } }; i(function() { d.addEventListener('keypress', a, false)}, 0); }();</script><html>
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+        <!-- title>GitWatcher | Blog</title -->
+        <title>Simple full-text search engine for repository watchlist | GitWatcher Blog</title>
+        <!-- title>GitWatcher - Simple full-text search engine for repository watchlist</title -->
+        <meta content="GitWatcher Blog" name="description" />
+        <meta name="google-site-verification" content="NNYWw1N9FDfaTDFNGmLAAlaoTKxQpxwqPIaVzdWQOkI" />
+        <meta content="Blogging about GitWatcher, a tool to monitoring GitHub for emerging git projects and disruptive programming language technologies"  name="keywords" />
+        
+        <!-- Mixing google-code-prettify with Twitter Bootstrap Code -->
+        <link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+        <!-- -->
+        
+        <link rel="shortcut icon" href="http://assets.tumblr.com/images/default_avatar_16.gif">
+        <link rel="alternate" type="application/rss+xml" href="../../rss">
+        
+            <meta name="description" content="Simple full-text search engine for repository watchlist Many of you have been asking for this since the beginning. Today, I have the pleasure to announce that full-text search engine for your..." />
+        
+                
+        <link href="http://gitwatcher.com/assets/application.css" media="screen" rel="stylesheet" type="text/css" />   
+
+        <script src="http://gitwatcher.com/assets/application.js" type="text/javascript"></script>
+        
+        <style>
+        	  /*<![CDATA[*/
+				body {
+				  padding-top: 70px;
+				}
+			  /*]]>*/       
+
+			.blog-post {
+				background-color: #F5F5F5;
+				border-radius: 6px 6px 6px 6px;
+				margin-bottom: 30px;
+				padding: 60px;
+			}
+			.blog-post #title { margin-bottom: 30px; }
+			.blog-post #comment { margin-top: 30px; }
+		</style>
+    
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+<!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+<!-- Read more: http://ogp.me/ -->
+<meta property="fb:app_id" content="48119224995" />
+<meta property="og:title" content="Simple full-text search engine for repository watchlist" />
+<meta property="og:url" content="http://blog.gitwatcher.com/post/16887303355/simple-full-text-search-engine-for-repository-watchlist" />
+<meta property="og:description" content="Many of you have been asking for this since the beginning. Today, I have the pleasure to announce that full-text search engine for your repository watchlist, is finally here.
+People who are watching..." />
+<meta property="og:type" content="tumblr-feed:entry" />
+<!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<meta http-equiv="x-dns-prefetch-control" content="off"/></head>
+
+    <body class='home'>
+      <!-- div class='topbar' -->
+      <div class='navbar navbar-fixed-top'>
+
+        <div class='navbar-inner'>
+          <div class='container'>
+            <a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <a class='brand' href='http://gitwatcher.com/'>GitWatcher</a>
+            <div class='nav-collapse'>
+            <ul class='nav right'>
+              <li><a href="http://gitwatcher.com/">Home</a></li>
+              <li class='active'><a href="../../index.html">Blog</a></li>
+              <!-- li><a href="#" class="help" data-remote="true">Help</a></li>
+              <li><a href="/signout">Sign Out</a></li>
+              <li class='last'>
+                <a href='#Welcome'>Welcome, Luca G. Soave!</a>
+              </li -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+
+
+      <!-- div class="container" -->
+          <div class="container">
+            <div class="row">
+            <!-- h1>GitWatcher</h1>
+            
+                <p id="description">Blog for gitwatcher.com</p>
+             -->
+  
+        <div class="span6 offset3">
+        <div class="content">
+                    		 
+                                
+                    <div class="blog-post">
+						
+						    <div  id="title">
+								<h2><a href="simple-full-text-search-engine-for-repository-watchlist">Simple full-text search engine for repository watchlist</a></h2>
+								February 2, 2012</br> by Luca G. Soave </br>
+							</div>			
+							
+								
+                        <p><span id="internal-source-marker_0.7034602681137719">Many of you have been asking for this since the beginning. Today, I have the pleasure to announce that full-text search engine for your repository watchlist, is finally here. </span><br/><span> </span><br/><span>People who are watching several hundred of GitHub repositories like me, after login the first time, get a big list of untagged git projects and starting tagging could be a bit tricky.</span><br/><span> </span><br/><span>Even if you can reorder your pages sorting by fields, ‘By Tag’ </span><span>tab </span><span>in your </span><span> </span><span>dasboard is still empty and you may have several pages to go through, that’s way a search engine became essential.</span><!-- more --><br/><span></span></p>
+<p><span>There are many open source full-text search engines like </span><a href="http://www.elasticsearch.org/" title="Elasticsearch - fulltext search engine for nosql databases - open source" target="_blank">elasticsearch</a><span> and <a href="http://sphinxsearch.com/" title="Sphinx - open source full-text search engine" target="_blank">sphinx</a> with relative </span>Ruby API and DSL<span>  like <a href="http://karmi.github.com/tire/" title="Tire -Ruby API &amp; DSL, with full Rails ActiveModel compatibility and mongoid integration search engine/database" target="_blank">Tire</a> / </span><a href="https://github.com/cousine/mebla" title="Mebla is an elasticsearch wrapper for Mongoid based on Slingshot." target="_blank">Mebla</a><span> and</span><a href="https://github.com/redbeard-tech/mongoid-sphinx" title="mongoid-sphinx - full text indexing extension for MongoDB using Sphinx and Mongoid " target="_blank">mongoid-sphinx</a>, <span class="st">but we have two constraints here</span><span>:<br/></span></p>
+<ol><li>a mongoid <a href="http://mongoid.org/docs/relations/embedded/1-n.html" rel="nofollow" target="_blank">embedded one to many</a> model on Rails 3.1 to search full text</li>
+<li>deploy on heroku without having to pay for add-ons, initially</li>
+</ol><p>All heroku Full-Text Search add-ons currently, seem to have just paying plans which are not good to start with, see <a href="http://addons.heroku.com/flying_sphinx" title="Flying Sphinx is an add-on for Heroku that allows you to harness the power and speed of the Sphinx full-text search tool." target="_blank">Flying Sphinx</a> and <a href="http://addons.heroku.com/websolr" title="Websolr by onemorecloud brings you the power of Solr as an easy-to-use service" target="_blank">Websolr</a>.</p>
+<p>There is also <a href="http://addons.heroku.com/searchify" title="( Beta )  Searchify IndexTank  Awesome hosted search made easy. True real-time, customizable full-text search" target="_blank">Searchify IndexTank</a> but is currently <span>Beta, then for our pourpose we decided to go even simpler </span><span>using <a href="https://github.com/joshuabowers/search_magic" title="SearchMagic provides scoped full text search and sort capabilities to Mongoid documents" target="_blank">search_magic</a> gem.</span></p>
+<p>We tried <a href="https://github.com/mauriciozaffari/mongoid_search" title="Simple full text search for Mongoid ORM" target="_blank">mongoid_search</a> and <a href="https://github.com/aaw/mongoid_fulltext" title="A full-text search implementation for the Mongoid ODM" target="_blank">mongoid_fulltext</a> too, but we have not been able to make them working with mongoid <a href="http://mongoid.org/docs/relations/embedded/1-n.html" rel="nofollow" target="_blank">embedded one to many</a>.</p>
+<p><span>That said, the search is very simple and restrictive&#160;: you insert a set of words and it match a permutation of the exact terms only, case unsensitive,  looking full-text into &#8220;repo&#8221;, &#8220;description&#8221; and &#8220;tags&#8221; </span><span>fields </span><span> of each repository, which means that in my case, searching for<em> &#8220;authentication omniath&#8221; </em>will find the following five responces&#160;:</span></p>
+<p><span><br/></span></p>
+<p><span id="internal-source-marker_0.7034602681137719"><img align="middle" height="313" src="http://media.tumblr.com/tumblr_lyhebrQXmj1r5qp5l.png" width="496"/></span></p>
+<p><span><br/></span></p>
+<p>but searching for <em>&#8220;rack </em><span><em>authentication omniath&#8221;</em> </span><span class="st"> gets back</span><span>  just one </span><span>responce</span><span>, as you can see&#160;:</span></p>
+<p><span><br/></span></p>
+<p><span><img src="http://media.tumblr.com/tumblr_lyhecavJ7m1r5qp5l.png"/></span></p>
+<p><span><br/></span></p>
+<p><span class="st">Very simple, but is what we need at the moment. Any feedback is welcome.<br/></span></p>
+                        
+                        
+                        
+                        <!-- p>
+                        </p -->
+                        <div  id="comment"><a href="simple-full-text-search-engine-for-repository-watchlist#disqus_thread">Comments</a></div>
+                    </div>
+                 
+            
+            
+
+
+            
+			<script type="text/javascript">var disqus_url = "http://blog.gitwatcher.com/post/16887303355/simple-full-text-search-engine-for-repository-watchlist"; var disqus_title ="Simple full-text search engine for repository watchlist";</script><div id="disqus_thread"></div>
+			<script type="text/javascript">
+			  /**
+				* var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+				*/
+			  (function() {
+			   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			   dsq.src = 'http://gitwatcher.disqus.com/embed.js';
+			   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			  })();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=gitwatcher">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+			<script type="text/javascript">
+			var disqus_shortname = 'gitwatcher';
+			(function () {
+			  var s = document.createElement('script'); s.async = true;
+			  s.src = 'http://gitwatcher.disqus.com/count.js';
+			  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+			}());
+			</script>
+        </div>
+
+        <hr>
+        <footer>
+          <!-- %p Copyright © 2011 Luca G. Soave -->
+          <p class='Copyright 2011-2012'>© 2012 GitWatcher</p>
+        </footer>                
+        </div>
+ 
+
+        <!-- p id="footer">
+            
+
+            
+
+            <a href="/archive">Archive</a>
+        </p -->
+        </div> <!-- row-fluid -->
+      </div> <!-- /container-fluid -->
+      <!-- /div> <!-- /container -->
+      
+        <!-- Put this at the bottom of the page -->
+        
+            <script type="text/javascript" src="../../tweets.js"></script>
+        
+
+
+<!-- a title="Real Time Web Analytics" hrfe="http://getclicky.com/66557842"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a -->
+<script src="http://static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(66557858); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/66557858ns.gif" /></p></noscript>
+
+<script type="text/javascript">
+  var uvOptions = {};
+  (function() {
+    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/0JupuL1a8yMcezn3fPKnzw.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+  })();
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2914610-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    <!-- BEGIN TUMBLR CODE --><iframe src="http://assets.tumblr.com/iframe.html?10&src=http%3A%2F%2Fblog.gitwatcher.com%2Fpost%2F16887303355%2Fsimple-full-text-search-engine-for-repository-watchlist&amp;pid=16887303355&amp;rk=tspkUTjv&amp;lang=en_US&amp;name=gitwatcher" scrolling="no" width="330" height="25" frameborder="0" style="position:absolute; z-index:1337; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden;" id="tumblr_controls"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]--><script type="text/javascript">_qoptions={qacct:"p-19UtqE8ngoZbM"};</script><script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script><noscript><img src="http://pixel.quantserve.com/pixel/p-19UtqE8ngoZbM.gif" style="display:none; border-width:0px; height:1px; width:1px;" alt=""/></noscript><!-- END TUMBLR CODE -->
+</body>
+</html>

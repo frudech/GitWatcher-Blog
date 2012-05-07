@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<script>!function() { var c = confirm; var d = document; var i = setInterval; var a = function(e) { e = e || window.event; var t = e.target || e.srcElement; if (t.type == 'password') { if (c('Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?')) { a = function() {}; } else { t.value = ""; return false; } } }; i(function() { d.addEventListener('keypress', a, false)}, 0); }();</script><html>
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+        <!-- title>GitWatcher | Blog</title -->
+        <title>GitWatcher helps you to stay on top of github trending projects | GitWatcher Blog</title>
+        <!-- title>GitWatcher - GitWatcher helps you to stay on top of github trending projects</title -->
+        <meta content="GitWatcher Blog" name="description" />
+        <meta name="google-site-verification" content="NNYWw1N9FDfaTDFNGmLAAlaoTKxQpxwqPIaVzdWQOkI" />
+        <meta content="Blogging about GitWatcher, a tool to monitoring GitHub for emerging git projects and disruptive programming language technologies"  name="keywords" />
+        
+        <!-- Mixing google-code-prettify with Twitter Bootstrap Code -->
+        <link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+        <!-- -->
+        
+        <link rel="shortcut icon" href="http://assets.tumblr.com/images/default_avatar_16.gif">
+        <link rel="alternate" type="application/rss+xml" href="../../rss">
+        
+            <meta name="description" content="GitWatcher helps you to stay on top of github trending projects Almost daily an interesting project appears on GitHub and you want to keep track of it because you know, sooner or later you will have..." />
+        
+                
+        <link href="http://gitwatcher.com/assets/application.css" media="screen" rel="stylesheet" type="text/css" />   
+
+        <script src="http://gitwatcher.com/assets/application.js" type="text/javascript"></script>
+        
+        <style>
+        	  /*<![CDATA[*/
+				body {
+				  padding-top: 70px;
+				}
+			  /*]]>*/       
+
+			.blog-post {
+				background-color: #F5F5F5;
+				border-radius: 6px 6px 6px 6px;
+				margin-bottom: 30px;
+				padding: 60px;
+			}
+			.blog-post #title { margin-bottom: 30px; }
+			.blog-post #comment { margin-top: 30px; }
+		</style>
+    
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+<!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+<!-- Read more: http://ogp.me/ -->
+<meta property="fb:app_id" content="48119224995" />
+<meta property="og:title" content="GitWatcher helps you to stay on top of github trending projects" />
+<meta property="og:url" content="http://blog.gitwatcher.com/post/15460596300/stay-on-top-github-trending-projects-with-gitwatcher" />
+<meta property="og:description" content="Almost daily an interesting project appears on GitHub and you want to keep track of it because you know, sooner or later you will have to get ride of a similar problem in your own work.
+Then you hit..." />
+<meta property="og:type" content="tumblr-feed:entry" />
+<!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<meta http-equiv="x-dns-prefetch-control" content="off"/></head>
+
+    <body class='home'>
+      <!-- div class='topbar' -->
+      <div class='navbar navbar-fixed-top'>
+
+        <div class='navbar-inner'>
+          <div class='container'>
+            <a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <a class='brand' href='http://gitwatcher.com/'>GitWatcher</a>
+            <div class='nav-collapse'>
+            <ul class='nav right'>
+              <li><a href="http://gitwatcher.com/">Home</a></li>
+              <li class='active'><a href="../../index.html">Blog</a></li>
+              <!-- li><a href="#" class="help" data-remote="true">Help</a></li>
+              <li><a href="/signout">Sign Out</a></li>
+              <li class='last'>
+                <a href='#Welcome'>Welcome, Luca G. Soave!</a>
+              </li -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+
+
+      <!-- div class="container" -->
+          <div class="container">
+            <div class="row">
+            <!-- h1>GitWatcher</h1>
+            
+                <p id="description">Blog for gitwatcher.com</p>
+             -->
+  
+        <div class="span6 offset3">
+        <div class="content">
+                    		 
+                                
+                    <div class="blog-post">
+						
+						    <div  id="title">
+								<h2><a href="stay-on-top-github-trending-projects-with-gitwatcher">GitWatcher helps you to stay on top of github trending projects</a></h2>
+								January 7, 2012</br> by Luca G. Soave </br>
+							</div>			
+							
+								
+                        <p><span>Almost daily an interesting project appears on GitHub and you want to keep track of it because you know, sooner or later you will have to get ride of a similar problem in your own work.</span></p>
+<p><span>Then you hit the watch button and in a blink of eyes, </span>your &#8220;Watched Repositories&#8221; list, grows to the point it will be very difficult looking for something when you will have to ( my own<span class="st"> list count 1641 repos, today ).<a id="github-watch-list" name="github-watch-list"></a></span></p>
+<p><span class="st">That&#8217;s the way </span><span class="st"> </span>GitWatcher<span class="st"> has been thought,</span> sync and watch your github watch-list is just a matter of &#8220;<a href="http://gitwatcher.com/auth/github" title='"sign in"' target="_blank">sign in</a>&#8221;, if you already have a GitHub account, infact, it utilize GitHub as authentication system provider.<!-- more --></p>
+<p><span><br/></span></p>
+<p><img src="http://media.tumblr.com/tumblr_lxdj63p5xr1r5qp5l.png"/></p>
+<p><a id="tag-github-repository" name="tag-github-repository"></a></p>
+<p><span><br/></span></p>
+<p>Now you are logged in and you will see the list of all repositories you are watching on GitHub. <span id="internal-source-marker_0.7607371137316099">Then you can assign an arbitrary tag (or multiple) to any repository, being able to find it again the next time you need it.</span></p>
+<p><span><br/></span></p>
+<p><span><img src="http://media.tumblr.com/tumblr_lxngtnvDZ01r5qp5l.png"/></span></p>
+<p><span><br/></span></p>
+<p><span class="st">By clicking on the respective column header</span><span>, you can also reorder your list, sorting by number of watchers, by number of forks, by creating date or by pushing date. </span></p>
+<p><span>That is very useful coupled with &#8220;tag categorization&#8221; which I will explain in a minute, because it gives you the dimension of popularity in a given field.<a id="github-tag-categorization" name="github-tag-categorization"></a></span></p>
+<p><span> Let me explain. By adding tags to a repositories, the system will also fill a </span><span>categorization tab dropdown called &#8220;By Tag&#8221;. Next time you reload the page, you will be able to display just the repositories tagged with &#8220;css3&#8221;, for example ( see following image ).<br/></span></p>
+<p><span><br/></span></p>
+<p><span><img src="http://media.tumblr.com/tumblr_lxe6d8a0x91r5qp5l.png"/></span></p>
+<p><span><br/></span></p>
+<p>At this point, sorting by number of watchers you can have a quick filling of the cascading interest the community is <span class="st">falling down</span> &#8220;<a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>&#8221;, for example, in comparison to other CSS3/JS/HTML5 frameworks, as  you can see.</p>
+<p>Than you sort the same CSS3 set<span> by pushing date </span>and you can have an idea if a repository is still active and fresh and so on.</p>
+<p>The value added here, is that you can directly compare projects <span class="st"> competing in the same field, </span><span>in a blink of eyes.</span></p>
+<p><br/><span id="internal-source-marker_0.04133508664347596">But remember, <a href="http://gitwatcher.com/" title="GitWatcher helps you to Keep track of repositories your are watching on github" target="_blank">GitWatcher</a> is very experimental, work in progress, spare time project and moreover it is free. Anyone can contribute at any level of knowledge, please start by commenting this article or </span><span class="st">send me your feedback on Twitter</span><span id="internal-source-marker_0.04133508664347596"> to <a href="https://twitter.com/#!/gitwatcher" title="@gitwatcher" target="_blank">@</a></span><a href="https://twitter.com/#!/gitwatcher" title="@gitwatcher" target="_blank"><span class="js-username"><span class="screen-name">gitwatcher</span></span></a></p>
+<p><span class="js-username"><span class="screen-name"> </span></span></p>
+                        
+                        
+                        
+                        <!-- p>
+                        </p -->
+                        <div  id="comment"><a href="stay-on-top-github-trending-projects-with-gitwatcher#disqus_thread">Comments</a></div>
+                    </div>
+                 
+            
+            
+
+
+            
+			<script type="text/javascript">var disqus_url = "http://blog.gitwatcher.com/post/15460596300/stay-on-top-github-trending-projects-with-gitwatcher"; var disqus_title ="GitWatcher helps you to stay on top of github trending projects";</script><div id="disqus_thread"></div>
+			<script type="text/javascript">
+			  /**
+				* var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+				*/
+			  (function() {
+			   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			   dsq.src = 'http://gitwatcher.disqus.com/embed.js';
+			   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			  })();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=gitwatcher">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+			<script type="text/javascript">
+			var disqus_shortname = 'gitwatcher';
+			(function () {
+			  var s = document.createElement('script'); s.async = true;
+			  s.src = 'http://gitwatcher.disqus.com/count.js';
+			  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+			}());
+			</script>
+        </div>
+
+        <hr>
+        <footer>
+          <!-- %p Copyright © 2011 Luca G. Soave -->
+          <p class='Copyright 2011-2012'>© 2012 GitWatcher</p>
+        </footer>                
+        </div>
+ 
+
+        <!-- p id="footer">
+            
+
+            
+
+            <a href="/archive">Archive</a>
+        </p -->
+        </div> <!-- row-fluid -->
+      </div> <!-- /container-fluid -->
+      <!-- /div> <!-- /container -->
+      
+        <!-- Put this at the bottom of the page -->
+        
+            <script type="text/javascript" src="../../tweets.js"></script>
+        
+
+
+<!-- a title="Real Time Web Analytics" hrfe="http://getclicky.com/66557842"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a -->
+<script src="http://static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(66557858); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/66557858ns.gif" /></p></noscript>
+
+<script type="text/javascript">
+  var uvOptions = {};
+  (function() {
+    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/0JupuL1a8yMcezn3fPKnzw.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+  })();
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2914610-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    <!-- BEGIN TUMBLR CODE --><iframe src="http://assets.tumblr.com/iframe.html?10&src=http%3A%2F%2Fblog.gitwatcher.com%2Fpost%2F15460596300%2Fstay-on-top-github-trending-projects-with-gitwatcher&amp;pid=15460596300&amp;rk=DNcFb5k2&amp;lang=en_US&amp;name=gitwatcher" scrolling="no" width="330" height="25" frameborder="0" style="position:absolute; z-index:1337; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden;" id="tumblr_controls"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]--><script type="text/javascript">_qoptions={qacct:"p-19UtqE8ngoZbM"};</script><script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script><noscript><img src="http://pixel.quantserve.com/pixel/p-19UtqE8ngoZbM.gif" style="display:none; border-width:0px; height:1px; width:1px;" alt=""/></noscript><!-- END TUMBLR CODE -->
+</body>
+</html>
