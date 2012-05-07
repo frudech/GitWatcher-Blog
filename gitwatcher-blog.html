@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <!-- title>{Title} | Blog</title -->
+        <title>{block:PostTitle}{PostTitle} | {/block:PostTitle}{Title} Blog</title>
+        <!-- title>{Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}</title -->
+        <meta content="GitWatcher Blog" name="description" />
+        <meta name="google-site-verification" content="NNYWw1N9FDfaTDFNGmLAAlaoTKxQpxwqPIaVzdWQOkI" />
+        <meta content="Blogging about GitWatcher, a tool to monitoring GitHub for emerging git projects and disruptive programming language technologies"  name="keywords" />
+        
+        <!-- Mixing google-code-prettify with Twitter Bootstrap Code -->
+        <link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+        <!-- -->
+        
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+                
+        <link href="http://gitwatcher.com/assets/application.css" media="screen" rel="stylesheet" type="text/css" />   
+
+        <script src="http://gitwatcher.com/assets/application.js" type="text/javascript"></script>
+        
+        <style>
+        	  /*<![CDATA[*/
+				body {
+				  padding-top: 70px;
+				}
+			  /*]]>*/       
+
+			.blog-post {
+				background-color: #F5F5F5;
+				border-radius: 6px 6px 6px 6px;
+				margin-bottom: 30px;
+				padding: 60px;
+			}
+			.blog-post #title { margin-bottom: 30px; }
+			.blog-post #comment { margin-top: 30px; }
+		</style>
+    </head>
+
+    <body class='home'>
+      <!-- div class='topbar' -->
+      <div class='navbar navbar-fixed-top'>
+
+        <div class='navbar-inner'>
+          <div class='container'>
+            <a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <a class='brand' href='http://gitwatcher.com/'>GitWatcher</a>
+            <div class='nav-collapse'>
+            <ul class='nav right'>
+              <li><a href="http://gitwatcher.com/">Home</a></li>
+              <li class='active'><a href="http://blog.gitwatcher.com/">Blog</a></li>
+              <!-- li><a href="#" class="help" data-remote="true">Help</a></li>
+              <li><a href="/signout">Sign Out</a></li>
+              <li class='last'>
+                <a href='#Welcome'>Welcome, Luca G. Soave!</a>
+              </li -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+
+
+      <!-- div class="container" -->
+          <div class="container">
+            <div class="row">
+            <!-- h1>{Title}</h1>
+            {block:Description}
+                <p id="description">{Description}</p>
+            {/block:Description} -->
+  
+        <div class="span6 offset3">
+        <div class="content">
+            {block:Posts}        		 
+                {block:Text}                
+                    <div class="blog-post">
+						{block:Title}
+						    <div  id="title">
+								<h2><a href="{Permalink}">{Title}</a></h2>
+								{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}</br> by Luca G. Soave </br>
+							</div>			
+						{/block:Title}	
+								
+                        {Body}
+                        
+                        {block:More}
+                            <a href="{Permalink}" class="big_ass_button">Read More</a>
+                        {/block:More}
+                        
+                        <!-- p>{block:More}&nbsp;&nbsp;&nbsp;
+                            {Body}<a href="{Permalink}">Read more &hellip;</a>
+                            {/block:More}
+                        </p -->
+                        <div  id="comment"><a href="{Permalink}#disqus_thread">Comments</a></div>
+                    </div>
+                {/block:Text} 
+            {/block:Posts}
+            
+
+
+            
+			<script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div id="disqus_thread"></div>
+			<script type="text/javascript">
+			  /**
+				* var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+				*/
+			  (function() {
+			   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			   dsq.src = 'http://gitwatcher.disqus.com/embed.js';
+			   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			  })();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=gitwatcher">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+			{/block:Permalink}<script type="text/javascript">
+			var disqus_shortname = 'gitwatcher';
+			(function () {
+			  var s = document.createElement('script'); s.async = true;
+			  s.src = 'http://gitwatcher.disqus.com/count.js';
+			  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+			}());
+			</script>
+        </div>
+
+        <hr>
+        <footer>
+          <!-- %p Copyright © 2011 Luca G. Soave -->
+          <p class='Copyright 2011-2012'>© 2012 GitWatcher</p>
+        </footer>                
+        </div>
+ 
+
+        <!-- p id="footer">
+            {block:PreviousPage}
+                <a href="{PreviousPage}">&#171; Previous</a>
+            {/block:PreviousPage}
+
+            {block:NextPage}
+                <a href="{NextPage}">Next &#187;</a>
+            {/block:NextPage}
+
+            <a href="/archive">Archive</a>
+        </p -->
+        </div> <!-- row-fluid -->
+      </div> <!-- /container-fluid -->
+      <!-- /div> <!-- /container -->
+      
+        <!-- Put this at the bottom of the page -->
+        {block:Twitter}
+            <script type="text/javascript" src="/tweets.js"></script>
+        {/block:Twitter}
+
+
+<!-- a title="Real Time Web Analytics" hrfe="http://getclicky.com/66557842"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a -->
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(66557858); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66557858ns.gif" /></p></noscript>
+
+<script type="text/javascript">
+  var uvOptions = {};
+  (function() {
+    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/0JupuL1a8yMcezn3fPKnzw.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+  })();
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2914610-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    </body>
+</html>
